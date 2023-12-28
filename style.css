@@ -1,0 +1,11 @@
+#red {
+  background-color: red;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  z-index: 1;
+}
+#green {
+  background-color: green;
+  height: 10px;
+}
