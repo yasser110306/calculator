@@ -22,10 +22,13 @@ button {
   border-radius: 50%;
   border: none;
   background-color: var(--btn--clr-secondry);
-  box-shadow: 0 0 8px 1px #7f7c7c35;
+  box-shadow: 0 0 8px 1px #7f7e7e34;
   color: #606a89;
   font-size: 1.5rem;
   font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -52,6 +55,7 @@ button {
   background-color: #1e2b54;
   color: #fff;
   font-size: 1.6rem;
+  box-shadow: 0 0 8px 1px #1e2b546d;
 }
 #factorial > i {
   font-size: 2rem;
@@ -59,16 +63,45 @@ button {
 .container > input {
   background-color: var(--primary--clr);
   border: none;
-  padding: 25px 0;
+  padding: 20px 15px;
   border-radius: 60px;
   color: #fff;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  text-align: right;
 }
 
 .num {
   color: #606a89;
   background-color: var(--btn--clr-primary);
+  box-shadow: 0 0 8px 1px inset #7f7e7e34, 0 0 8px 1px #7f7e7e34;
+}
+
+#minus {
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #ff445a;
+  box-shadow: 0 0 8px 1px #ff445a80;
+}
+
+#divide {
+  color: #fff;
+  background-color: var(--primary--clr);
+  box-shadow: 0 0 8px 1px #3489ff61;
+}
+
+#multiple {
+  color: #fff;
+  background-color: #ffc802;
+  box-shadow: 0 0 8px 1px #ffc80390;
+}
+
+#sum {
+  color: #fff;
+  background-color: #62de77;
+  box-shadow: 0 0 8px 1px #62de7775;
 }
