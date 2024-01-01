@@ -6,31 +6,22 @@
   --primary--clr: #3488ff;
 }
 
-html {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
-
 body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
   margin: 0;
   background-color: var(--bg--clr);
   height: 100vh;
 }
-
-button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--btn--clr-secondry);
-  box-shadow: 0 0 8px 1px #7f7e7e34;
-  color: #606a89;
-  font-size: 1.5rem;
-  font-family: "Rubik", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .container {
   width: 320px;
   display: flex;
@@ -44,41 +35,58 @@ button {
   padding: 25px;
   border-radius: 15px;
 }
-.container > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-#clear {
-  background-color: #1e2b54;
-  color: #fff;
-  font-size: 1.6rem;
-  box-shadow: 0 0 8px 1px #1e2b546d;
-}
-#factorial > i {
-  font-size: 2rem;
-}
-.container > input {
+.display {
   background-color: var(--primary--clr);
   border: none;
-  padding: 20px 15px;
+  padding: 25px 15px;
   border-radius: 60px;
   color: #fff;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  outline: none;
   text-align: right;
 }
-
-.num {
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
   color: #606a89;
   background-color: var(--btn--clr-primary);
   box-shadow: 0 0 8px 1px inset #7f7e7e34, 0 0 8px 1px #7f7e7e34;
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+.buttons button:active {
+  transform: scale(1.08);
+}
+.operator {
+  color: #2f9fff;
+}
+
+.buttons .special {
+  background-color: var(--btn--clr-secondry);
+  box-shadow: 0 0 8px 1px #7f7c7c35;
+  color: #606a89;
+}
+
+#sum {
+  color: #fff;
+  background-color: #62de77;
+  box-shadow: 0 0 8px 1px #62de7775;
 }
 
 #minus {
@@ -86,6 +94,7 @@ button {
   color: #fff;
   background-color: #ff445a;
   box-shadow: 0 0 8px 1px #ff445a80;
+  display: flex;
 }
 
 #divide {
@@ -100,8 +109,8 @@ button {
   box-shadow: 0 0 8px 1px #ffc80390;
 }
 
-#sum {
+#clear {
+  background-color: #1e2b54;
   color: #fff;
-  background-color: #62de77;
-  box-shadow: 0 0 8px 1px #62de7775;
+  font-size: 1.6rem;
 }
